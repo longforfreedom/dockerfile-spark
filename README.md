@@ -1,3 +1,4 @@
+###docker-machine start default
 ##https://mirrors.aliyun.com/apache/spark/
 
 docker build -t migle/spark .
@@ -29,3 +30,12 @@ macos中启动spark-shell连接
 spark-shell --master spark://10.10.10.100:7077
 
 
+
+##docker-compose
+>> docker-compose start default
+docker-compose.yml
+###启动
+docker-compose up -d
+
+docker-compose ps #查看情况
+docker-compose scale worker=2

@@ -2,8 +2,8 @@ version: "2"
 
 services:
   master:
-    image: singularities/spark
-    command: start-spark master
+    image: migle/spark
+    command: spark-class org.apache.spark.deploy.master.Master 
     hostname: master
     ports:
       - "6066:6066"
@@ -11,10 +11,10 @@ services:
       - "8080:8080"
       - "50070:50070"
   worker:
-    image: singularities/spark
-    command: start-spark worker master
+    image: migle/spark
+    command: spark-class org.apache.spark.deploy.worker.Worker spark://master:7077
     environment:
       SPARK_WORKER_CORES: 1
-      SPARK_WORKER_MEMORY: 2g
+      SPARK_WORKER_MEMORY: 1g
     links:
       - master
