@@ -6,7 +6,9 @@ ENV JAVA_HOME /usr/java/default
 WORKDIR /opt
 
 #download from spark website
-RUN wget https://mirrors.aliyun.com/apache/spark/spark-1.6.3/spark-1.6.3-bin-hadoop2.6.tgz
+#aliyun镜像在dockerhub上构建下载失败
+#RUN wget https://mirrors.aliyun.com/apache/spark/spark-1.6.3/spark-1.6.3-bin-hadoop2.6.tgz
+RUN wget http://d3kbcqa49mib13.cloudfront.net/spark-1.6.3-bin-hadoop2.6.tgz
 
 #upload local spark
 #COPY ./spark-1.6.3-bin-hadoop2.6.tgz /opt
