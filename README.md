@@ -1,5 +1,5 @@
 ## 关于  
-这一个基于CentOS7和Oracle Java8的spark镜像，Spark版本为*spark-1.6.3-bin-hadoop2.6   
+这一个基于CentOS7和Oracle Java8的Docker镜像，Spark版本为*spark-1.6.3-bin-hadoop2.6*   
 
 # 如何启动一个Spark集群
 
@@ -76,3 +76,8 @@ docker-compose ps #查看情况
 `spark-shell --master spark://10.10.10.100:7077`
 
 >> ！master启动时将7077端口映射到了宿主机的7077
+
+
+
+## 致谢
+本文基本都是参照： https://github.com/SingularitiesCR/spark-docker 估计他看不到，但还是感谢作者。
