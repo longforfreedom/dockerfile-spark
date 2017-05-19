@@ -1,4 +1,4 @@
-##关于
+## 关于  
 这一个基于CentOS7和Oracle Java8的spark镜像，Spark版本为*spark-1.6.3-bin-hadoop2.6   
 
 # 如何启动一个Spark集群
@@ -15,7 +15,7 @@
 `eval $(docker-machine env default)`  #设置环境变量
 
 
-如果想使用不同的spark版本，可以在这个基本上修改https://github.com/longforfreedom/dockerfile-spark
+>>如果想使用不同的spark版本，可以在这个基本上修改https://github.com/longforfreedom/dockerfile-spark
 >>从dockfile构建进用 `docker build -t migle/spark .`  
 
 ## 手动方式 
@@ -68,8 +68,6 @@ docker-compose ps #查看情况
 
 启动两个worker:  
 `docker-compose scale worker=2`
-
-
 
 ## 其它
 与Linux系统相比MacOS和windows的docker其实是在virtualbox中的Linux中运行的，所以MacOS和Windows中的Docker镜像的端口映射是相对于虚拟机中的Linux而言的，所以如果要从MacOS和Windows中连接到Docker其实是需要先连接到虚拟机中的Linux的，   
