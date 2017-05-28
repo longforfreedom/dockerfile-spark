@@ -26,13 +26,13 @@
 ### 启动worker
 >> 想要几个Worker就执行几次下面这两条
 
-    ``` 
+``` 
         ##1.  启动镜像
         docker run --link=master -i -t migle/spark 
         ##2. 在镜像中启动worker
         spark-class org.apache.spark.deploy.worker.Worker spark://master:7077
 
-    ```  
+```  
 
 ## docker-compose 方式
 >> docker-compose start default
