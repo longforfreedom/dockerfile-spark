@@ -35,10 +35,10 @@
 ```  
 
 ## docker-compose 方式
->> docker-compose start default
-docker-compose.yml
-###启动
-新建文件：docker-compose.yml,内容如下
+>> docker-compose start default  docker-compose.yml ###启动
+
+新建文件：docker-compose.yml,内容如下  
+
 ```
 version: "2"
 
